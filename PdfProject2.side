@@ -1,0 +1,116 @@
+{
+  "id": "c3b76b07-2695-4c95-8c8d-5c3e545059dc",
+  "version": "2.0",
+  "name": "PdfProject2",
+  "url": "https://arxiv.org/",
+  "tests": [
+    {
+      "id": "ff1c799a-be50-47d9-b515-0c7a90b16fd1",
+      "name": "All",
+      "commands": [
+        {
+          "id": "e9d0b87b-d415-487e-9880-ff278e5bf606",
+          "comment": "filter all files",
+          "command": "open",
+          "target": "https://arxiv.org/search/advanced?advanced=1&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-physics_archives=all&classification-include_cross_list=include&date-filter_by=all_dates&date-year=&date-from_date=&date-to_date=&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4a20a97c-0f64-46fe-888c-38ce11c294fb",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//ol[@class='breathe-horizontal']/li[1]/div/p/span/a[text()='pdf']",
+          "targets": [],
+          "value": "latestPdfLink"
+        },
+        {
+          "id": "0ab09fe0-6ae8-403e-81b7-987f2f618956",
+          "comment": "",
+          "command": "pause",
+          "target": "7000",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "4745003c-bee8-46d2-9570-938a17511645",
+      "name": "Maths and stats search",
+      "commands": [
+        {
+          "id": "659f0098-8cdb-425a-bc11-a50020508783",
+          "comment": "",
+          "command": "open",
+          "target": "https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-mathematics=y&classification-physics_archives=all&classification-q_biology=y&classification-statistics=y&classification-include_cross_list=exclude&date-filter_by=all_dates&date-year=&date-from_date=&date-to_date=&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "83185e4d-ddbc-49d9-96f0-1003d72dc16e",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//ol[@class='breathe-horizontal']/li[1]/div/p/span/a[text()='pdf']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e7d95294-af3d-4ce8-af1f-db2445b44d3d",
+          "comment": "",
+          "command": "pause",
+          "target": "6000",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "eb184d3d-f3f5-4486-af15-dc8e9571215d",
+      "name": "physics",
+      "commands": [
+        {
+          "id": "cea7feed-dd55-48ff-abb4-7c18bc6dd85d",
+          "comment": "",
+          "command": "open",
+          "target": "https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-physics=y&classification-physics_archives=nucl-ex&classification-include_cross_list=exclude&date-filter_by=all_dates&date-year=&date-from_date=&date-to_date=&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cf5dcb55-bb64-4a27-a83c-2bda70ec6c2a",
+          "comment": "",
+          "command": "click",
+          "target": "xpath=//ol[@class='breathe-horizontal']/li[1]/div/p/span/a[text()='pdf']",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "41b04aa3-53c3-4053-a70c-e6ed853e1c7a",
+          "comment": "",
+          "command": "pause",
+          "target": "6000",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "a78d1e6a-9f4c-4ac9-a0d7-7ceb2d23251c",
+      "name": "Default Suite",
+      "persistSession": false,
+      "parallel": false,
+      "timeout": 300,
+      "tests": [
+        "ff1c799a-be50-47d9-b515-0c7a90b16fd1",
+        "4745003c-bee8-46d2-9570-938a17511645",
+        "eb184d3d-f3f5-4486-af15-dc8e9571215d"
+      ]
+    }
+  ],
+  "urls": [
+    "https://arxiv.org/"
+  ],
+  "plugins": []
+}
